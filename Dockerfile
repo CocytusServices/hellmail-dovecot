@@ -5,8 +5,6 @@ RUN apk add --no-cache dovecot dovecot-lmtpd dovecot-pigeonhole-plugin \
     rm -rf /etc/dovecot/; \
     pip install mail-parser
 
-RUN chown -R 76:76 /etc/dovecot/sieves/
-
 ENV DOVECOT_HOSTDOMAIN="local.domain"
 
 EXPOSE 113 143 993 4190
