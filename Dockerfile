@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache dovecot dovecot-lmtpd dovecot-pigeonhole-plugin \
+RUN apk add --no-cache dovecot dovecot-lmtpd dovecot-mysql dovecot-pigeonhole-plugin \
                        rspamd-client bash sed grep python3 py3-pip py3-requests; \
     rm -rf /etc/dovecot/; \
     pip install mail-parser
